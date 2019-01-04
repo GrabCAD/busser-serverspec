@@ -25,7 +25,7 @@ require 'rubygems/dependency_installer'
 #
 class Busser::RunnerPlugin::Serverspec < Busser::RunnerPlugin::Base
   postinstall do
-    install_gem('bundler')
+    install_gem('bundler', ENV['BUSSER_SERVERSPEC_BUNDLER_VER'])
   end
 
   def test
